@@ -2,96 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 @layer base {
   :root {
-    /* Dark Theme by Default */
-    --background: 220 25% 10%; /* Dark bluish-charcoal */
-    --foreground: 220 15% 85%; /* Light grey */
+    /* Professional Black & Blue Theme with Pure White Text */
+    --background: 0 0 0; /* Pure black */
+    --foreground: 255 255 255; /* Pure white text */
 
-    --card: 220 25% 15%; /* Slightly lighter than background */
-    --card-foreground: 220 15% 85%;
+    --card: 15 15 15; /* Dark charcoal */
+    --card-foreground: 255 255 255; /* Pure white text */
 
-    --popover: 220 25% 12%; /* Darker popover */
-    --popover-foreground: 220 15% 85%;
+    --popover: 20 20 20;
+    --popover-foreground: 255 255 255; /* Pure white text */
 
-    --primary: 180 70% 50%; /* Vibrant Cyan/Teal */
-    --primary-foreground: 180 70% 10%; /* Darker text for primary */
+    --primary: 59 130 246; /* Professional blue */
+    --primary-foreground: 0 0 0; /* Black text on blue */
 
-    --secondary: 220 20% 25%; /* Medium dark grey for secondary elements */
-    --secondary-foreground: 220 15% 80%;
+    --secondary: 30 30 30; /* Dark grey */
+    --secondary-foreground: 255 255 255; /* Pure white text */
 
-    --muted: 220 20% 20%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 25 25 25; /* Dark background */
+    --muted-foreground: 255 255 255; /* Pure white text */
 
-    --accent: 320 70% 60%; /* Bright Magenta */
-    --accent-foreground: 320 70% 10%; /* Darker text for accent */
+    --accent: 37 99 235; /* Deeper blue accent */
+    --accent-foreground: 255 255 255; /* Pure white text */
 
-    --destructive: 0 70% 55%; /* Adjusted red for dark theme */
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255; /* Pure white text */
 
-    --border: 220 20% 30%;
-    --input: 220 20% 25%;
-    --ring: 180 70% 55%; /* Ring color related to primary */
+    --border: 40 40 40;
+    --input: 30 30 30; /* Dark input background */
+    --ring: 59 130 246;
 
-    --chart-1: 180 70% 60%;
-    --chart-2: 200 70% 60%;
-    --chart-3: 220 70% 60%;
-    --chart-4: 320 70% 70%;
-    --chart-5: 300 70% 70%;
+    --chart-1: 59 130 246;
+    --chart-2: 37 99 235;
+    --chart-3: 29 78 216;
+    --chart-4: 30 64 175;
+    --chart-5: 30 58 138;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Sidebar variables for dark theme */
-    --sidebar-background: 220 25% 12%; /* Slightly darker than main background */
-    --sidebar-foreground: 220 15% 85%;
-    --sidebar-primary: 180 70% 50%;
-    --sidebar-primary-foreground: 180 70% 10%;
-    --sidebar-accent: 320 70% 60%;
-    --sidebar-accent-foreground: 320 70% 10%;
-    --sidebar-border: 220 20% 25%;
-    --sidebar-ring: 180 70% 55%;
+    --sidebar-background: 15 15 15;
+    --sidebar-foreground: 255 255 255; /* Pure white text */
+    --sidebar-primary: 59 130 246;
+    --sidebar-primary-foreground: 0 0 0;
+    --sidebar-accent: 37 99 235;
+    --sidebar-accent-foreground: 255 255 255; /* Pure white text */
+    --sidebar-border: 40 40 40;
+    --sidebar-ring: 59 130 246;
   }
 
-  /* Fallback .dark class, in case html class is removed or for specificity */
   .dark {
-    --background: 220 25% 10%;
-    --foreground: 220 15% 85%;
-    --card: 220 25% 15%;
-    --card-foreground: 220 15% 85%;
-    --popover: 220 25% 12%;
-    --popover-foreground: 220 15% 85%;
-    --primary: 180 70% 50%;
-    --primary-foreground: 180 70% 10%;
-    --secondary: 220 20% 25%;
-    --secondary-foreground: 220 15% 80%;
-    --muted: 220 20% 20%;
-    --muted-foreground: 220 10% 60%;
-    --accent: 320 70% 60%;
-    --accent-foreground: 320 70% 10%;
-    --destructive: 0 70% 55%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 220 20% 30%;
-    --input: 220 20% 25%;
-    --ring: 180 70% 55%;
+    --background: 0 0 0;
+    --foreground: 255 255 255; /* Pure white text */
+    --card: 15 15 15;
+    --card-foreground: 255 255 255; /* Pure white text */
+    --popover: 20 20 20;
+    --popover-foreground: 255 255 255; /* Pure white text */
+    --primary: 59 130 246;
+    --primary-foreground: 0 0 0; /* Black text on blue */
+    --secondary: 30 30 30;
+    --secondary-foreground: 255 255 255; /* Pure white text */
+    --muted: 25 25 25; /* Dark background */
+    --muted-foreground: 255 255 255; /* Pure white text */
+    --accent: 37 99 235;
+    --accent-foreground: 255 255 255; /* Pure white text */
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255; /* Pure white text */
+    --border: 40 40 40;
+    --input: 30 30 30; /* Dark input background */
+    --ring: 59 130 246;
 
-    --chart-1: 180 70% 60%;
-    --chart-2: 200 70% 60%;
-    --chart-3: 220 70% 60%;
-    --chart-4: 320 70% 70%;
-    --chart-5: 300 70% 70%;
+    --chart-1: 59 130 246;
+    --chart-2: 37 99 235;
+    --chart-3: 29 78 216;
+    --chart-4: 30 64 175;
+    --chart-5: 30 58 138;
 
-    --sidebar-background: 220 25% 12%;
-    --sidebar-foreground: 220 15% 85%;
-    --sidebar-primary: 180 70% 50%;
-    --sidebar-primary-foreground: 180 70% 10%;
-    --sidebar-accent: 320 70% 60%;
-    --sidebar-accent-foreground: 320 70% 10%;
-    --sidebar-border: 220 20% 25%;
-    --sidebar-ring: 180 70% 55%;
+    --sidebar-background: 15 15 15;
+    --sidebar-foreground: 255 255 255; /* Pure white text */
+    --sidebar-primary: 59 130 246;
+    --sidebar-primary-foreground: 0 0 0;
+    --sidebar-accent: 37 99 235;
+    --sidebar-accent-foreground: 255 255 255; /* Pure white text */
+    --sidebar-border: 40 40 40;
+    --sidebar-ring: 59 130 246;
   }
 }
 
@@ -101,5 +101,406 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    color: #ffffff !important; /* Force pure white text */
+    background: 
+      /* Animated gradient backdrop */
+      linear-gradient(135deg, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(15, 15, 30, 1) 25%, 
+        rgba(0, 0, 0, 1) 50%, 
+        rgba(20, 20, 40, 1) 75%, 
+        rgba(0, 0, 0, 1) 100%
+      ),
+      /* Floating orbs */
+      radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 40% 60%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 70% 30%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+      /* Subtle grid pattern */
+      linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 
+      100% 100%,
+      800px 800px,
+      600px 600px,
+      400px 400px,
+      500px 500px,
+      100px 100px,
+      100px 100px;
+    background-position:
+      0 0,
+      0 0,
+      100% 100%,
+      50% 50%,
+      80% 20%,
+      0 0,
+      0 0;
+    animation: backgroundShift 20s ease-in-out infinite;
   }
+
+  /* Force white text on all elements */
+  h1, h2, h3, h4, h5, h6, p, span, div, a, button, label, input, textarea, li, td, th {
+    color: #ffffff !important;
+  }
+
+  /* Ensure primary text stays blue */
+  .text-primary {
+    color: rgb(59 130 246) !important;
+  }
+
+  .text-accent {
+    color: rgb(37 99 235) !important;
+  }
+
+  /* Black text only on primary/accent backgrounds */
+  .bg-primary {
+    color: #000000 !important;
+  }
+
+  .bg-accent {
+    color: #000000 !important;
+  }
+
+  /* Override muted text to be white */
+  .text-muted-foreground {
+    color: #ffffff !important;
+    opacity: 0.8;
+  }
+
+  /* Ensure card text is white */
+  .text-card-foreground {
+    color: #ffffff !important;
+  }
+
+  /* Ensure foreground text is white */
+  .text-foreground {
+    color: #ffffff !important;
+  }
+
+  /* Ensure destructive text is visible */
+  .text-destructive {
+    color: rgb(239 68 68) !important;
+  }
+
+  /* Fix button text colors */
+  button {
+    color: #ffffff !important;
+  }
+
+  button.bg-primary {
+    color: #000000 !important;
+  }
+
+  button.bg-accent {
+    color: #000000 !important;
+  }
+
+  /* Fix input and form elements */
+  input, textarea, select {
+    background-color: rgba(30, 30, 30, 1) !important;
+    color: #ffffff !important;
+    border-color: rgba(40, 40, 40, 1) !important;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+}
+
+/* Background animation */
+@keyframes backgroundShift {
+  0%, 100% { 
+    background-position:
+      0 0,
+      0 0,
+      100% 100%,
+      50% 50%,
+      80% 20%,
+      0 0,
+      0 0;
+  }
+  50% { 
+    background-position:
+      0 0,
+      -100px -100px,
+      120% 80%,
+      60% 40%,
+      70% 30%,
+      -10px -10px,
+      -10px -10px;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes glow {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(59, 130, 246, 0.4),
+      0 0 40px rgba(59, 130, 246, 0.2),
+      inset 0 0 20px rgba(59, 130, 246, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 30px rgba(59, 130, 246, 0.6),
+      0 0 60px rgba(59, 130, 246, 0.3),
+      inset 0 0 30px rgba(59, 130, 246, 0.15);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.3),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Enhanced glass morphism effect - ensure dark background */
+.glass {
+  background: rgba(0, 0, 0, 0.7) !important; /* Dark background */
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #ffffff !important; /* Ensure white text */
+}
+
+/* Professional grid pattern */
+.professional-grid {
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 2px, transparent 2px);
+  background-size: 60px 60px, 60px 60px, 120px 120px;
+  animation: gridMove 30s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0, 0 0, 0 0; }
+  100% { background-position: 60px 60px, 60px 60px, 120px 120px; }
+}
+
+/* Clean headline styles - NO EFFECTS */
+.clean-headline {
+  color: rgb(59 130 246) !important; /* Professional blue */
+  font-weight: 900; /* Extra bold */
+  letter-spacing: -0.02em; /* Tight letter spacing */
+}
+
+/* Enhanced glow effects for other elements (NOT headlines) */
+.blue-glow {
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.4),
+    0 0 40px rgba(59, 130, 246, 0.2),
+    inset 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.blue-glow-hover:hover {
+  box-shadow: 
+    0 0 30px rgba(59, 130, 246, 0.6),
+    0 0 60px rgba(59, 130, 246, 0.3),
+    inset 0 0 30px rgba(59, 130, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Floating particles */
+.floating-particles::before,
+.floating-particles::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(59, 130, 246, 0.6);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-particles::before {
+  top: 20%;
+  left: 10%;
+  animation-delay: -2s;
+}
+
+.floating-particles::after {
+  top: 60%;
+  right: 15%;
+  animation-delay: -4s;
+}
+
+/* Custom scrollbar with glow */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8));
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 1), rgba(37, 99, 235, 1));
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+}
+
+/* Enhanced button effects */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-glow:hover::before {
+  left: 100%;
+}
+
+/* Pure white text classes */
+.text-white-glow {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.text-white-pure {
+  color: #ffffff !important;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+/* Animated border */
+.animated-border {
+  position: relative;
+  background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  background-size: 200% 200%;
+  animation: borderShift 3s ease infinite;
+}
+
+@keyframes borderShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Ensure all text elements are white by default */
+* {
+  color: #ffffff;
+}
+
+/* Override any remaining non-white text */
+.text-gray-500,
+.text-gray-400,
+.text-gray-600,
+.text-slate-500,
+.text-slate-400,
+.text-slate-600 {
+  color: #ffffff !important;
+}
+
+/* Fix specific UI components */
+.bg-white {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: #ffffff !important;
+}
+
+/* Ensure modal/dialog backgrounds are dark */
+[role="dialog"], .dialog-content {
+  background-color: rgba(15, 15, 15, 1) !important;
+  color: #ffffff !important;
+}
+
+/* Fix any remaining white backgrounds */
+.bg-background {
+  background-color: rgba(0, 0, 0, 1) !important;
+}
+
+.bg-card {
+  background-color: rgba(15, 15, 15, 1) !important;
+}
+
+.bg-muted {
+  background-color: rgba(25, 25, 25, 1) !important;
+}
+
+/* Ensure buttons with primary/accent backgrounds have black text */
+.bg-primary * {
+  color: #000000 !important;
+}
+
+.bg-accent * {
+  color: #000000 !important;
+}
+
+/* Fix any remaining visibility issues */
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-100 {
+  opacity: 1 !important;
+}
+
+/* Ensure proper contrast for all interactive elements */
+button:not(.bg-primary):not(.bg-accent) {
+  color: #ffffff !important;
+}
+
+a:not(.bg-primary):not(.bg-accent) {
+  color: #ffffff !important;
+}
+
+/* Fix form elements */
+.form-control, .form-input {
+  background-color: rgba(30, 30, 30, 1) !important;
+  color: #ffffff !important;
+  border-color: rgba(40, 40, 40, 1) !important;
 }
